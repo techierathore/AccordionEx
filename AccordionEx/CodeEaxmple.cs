@@ -11,7 +11,20 @@ namespace AccordionEx
 			Title = "Code Example";
 			var vAccordionSource = GetSampleData ();
 			var vAccordionControl = new Accordion (vAccordionSource);
-			Content = vAccordionControl;
+			var vSecondAccordion = new Accordion (){
+				FirstExpaned = true,
+				DataSource=GetSampleData ()
+			};
+			vSecondAccordion.DataBind ();
+			var vViewLayout = new StackLayout(){
+				Children = {
+					new Label { Text = "First Accordion" },
+					vAccordionControl,
+					new Label { Text = "Second Accordion" },
+					vSecondAccordion}				
+			};
+
+			Content = vViewLayout;
 		}
 
 		void OnListItemClicked (object o, ItemTappedEventArgs e){

@@ -11,6 +11,8 @@ namespace AccordionEx
 			InitializeComponent ();
 			MainOne.DataSource = GetSampleData ();
 			MainOne.DataBind ();
+			SecOne.DataSource = GetSampleData ();
+			SecOne.DataBind ();
 		}
 
 		void OnListItemClicked (object o, ItemTappedEventArgs e){

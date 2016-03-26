@@ -4,6 +4,12 @@
 	xmlns:ctrl="clr-namespace:AccordionEx;assembly=AccordionEx"
 	x:Class="AccordionEx.XamlExample" Title="XAML Example">
 	<ContentPage.Content>
-		<ctrl:Accordion x:Name="MainOne" />
+	<StackLayout>
+	    <Label Text="Frist Accordion :" />
+	    <ctrl:Accordion x:Name="MainOne" />
+	    <Label Text="Second Accordion :" />
+	    <ctrl:Accordion x:Name="SecOne" FirstExpaned = "true" />
+	</StackLayout>
+		
 	</ContentPage.Content>
 </ContentPage>
